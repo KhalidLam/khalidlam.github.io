@@ -654,3 +654,12 @@ body:not(.user-is-tabbing) button:focus, body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     }
 }
+
+/* Disable link */
+
+.isDisabled {
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+}
