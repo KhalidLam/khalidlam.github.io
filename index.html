@@ -49,7 +49,9 @@
           </h1>
 
           <p>
-           A Software Developer, having experience in building Web and Mobile applications with JavaScript / Reactjs / Laravel / Android Studio and some other cool libraries and frameworks.
+            A Software Developer, having experience in building Web and Mobile
+            applications with JavaScript / Reactjs / Laravel / Android Studio
+            and some other cool libraries and frameworks.
           </p>
           <a href="#contact" class="btn btn--pink">Contact me</a>
           <a
@@ -71,7 +73,6 @@
         <div class="row">
           <h2>My Work</h2>
           <div class="work__boxes">
-
             <!-- CubeMail  -->
             <div class="work__box">
               <div class="work__text">
@@ -106,6 +107,7 @@
                 <img
                   src="./images/project-cubemail_726x420.jpg"
                   class="work__image"
+                  data-src="images/full-cube-mail.jpg"
                   alt="CubeMail"
                 />
               </div>
@@ -115,9 +117,7 @@
             <div class="work__box">
               <div class="work__text">
                 <h3>Instagram Clone</h3>
-                <p>
-                  An Instagram Clone built with Laravel
-                </p>
+                <p>An Instagram Clone built with Laravel</p>
                 <ul class="work__list">
                   <li>Laravel</li>
                   <li>VueJs</li>
@@ -144,6 +144,7 @@
                 <img
                   src="./images/project-instagram-clone.jpg"
                   class="work__image"
+                  data-src="images/full-insta-clone.jpg"
                   alt="Instagram Clone"
                 />
               </div>
@@ -153,9 +154,7 @@
             <div class="work__box">
               <div class="work__text">
                 <h3>Ask Me</h3>
-                <p>
-                  Clone project of stackoverflow built with
-                </p>
+                <p>Clone project of stackoverflow built with</p>
                 <ul class="work__list">
                   <li>Laravel (REST API)</li>
                   <li>ReactJS</li>
@@ -184,6 +183,7 @@
                 <img
                   src="./images/project-ask-me_726x454.jpg"
                   class="work__image"
+                  data-src="images/full-dev-culture.jpg"
                   alt="Ask Me"
                 />
               </div>
@@ -193,9 +193,7 @@
             <div class="work__box">
               <div class="work__text">
                 <h3>Dev Culture</h3>
-                <p>
-                  Simple PHP blog application written with php 7 and MySQL
-                </p>
+                <p>Simple PHP blog application written with php 7 and MySQL</p>
                 <ul class="work__list">
                   <li>PHP</li>
                   <li>MySQL</li>
@@ -222,6 +220,7 @@
                 <img
                   src="./images/project-dev-culture_726x421.jpg"
                   class="work__image"
+                  data-src="images/full-dev-culture.jpg"
                   alt="Dev Culture"
                 />
               </div>
@@ -231,9 +230,7 @@
             <div class="work__box">
               <div class="work__text">
                 <h3>Random Movie</h3>
-                <p>
-                  Random Movie built with ReactJS
-                </p>
+                <p>Random Movie built with ReactJS</p>
                 <ul class="work__list">
                   <li>ReactJS</li>
                   <li>TMDb API</li>
@@ -259,6 +256,7 @@
                 <img
                   src="./images/project-random-movie_726x588.jpg"
                   class="work__image"
+                  data-src="images/full-random-movie.jpg"
                   alt="Random Movie"
                 />
               </div>
@@ -268,9 +266,7 @@
             <div class="work__box">
               <div class="work__text">
                 <h3>Pixel Art Maker</h3>
-                <p>
-                  Udacity Front-End final project
-                </p>
+                <p>Udacity Front-End final project</p>
                 <ul class="work__list">
                   <li>HTML</li>
                   <li>CSS</li>
@@ -297,6 +293,7 @@
                 <img
                   src="./images/project-pixel-art-maker.jpg"
                   class="work__image"
+                  data-src="images/full-pixel-art-maker.jpg"
                   alt="Pixel Art Maker"
                 />
               </div>
@@ -304,6 +301,13 @@
           </div>
         </div>
       </section>
+
+      <!-- ***** The Modal ***** -->
+      <div id="imgModel" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-img" />
+        <div id="caption"></div>
+      </div>
 
       <!-- ***** Skills ***** -->
 
