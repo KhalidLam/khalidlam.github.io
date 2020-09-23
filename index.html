@@ -4,23 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/png" href="./images/favicon.ico" />
+    <meta name="description" content="Add small description of yourslef." />
+    <meta
+      name="keywords"
+      content="Khalid Lamsadi, React, Laravel, HTML, CSS, PHP, JavaScript"
+    />
+
+    <title>
+      Khalid Lamsadi | A Full-Stack Web Developer based in Casablanca, Morocco.
+    </title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
       integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/index.css" />
 
-    <title>
-      Khalid Lamsadi | A Full-Stack Web Developer based in Casablanca, Morocco.
-    </title>
-
-    <meta name="description" content="Add small description of yourslef." />
-    <meta
-      name="keywords"
-      content="Khalid Lamsadi, React, Laravel, HTML, CSS, PHP, JavaScript"
-    />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="css/modal-video.min.css" />
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery-modal-video.min.js"></script>
   </head>
 
   <body>
@@ -101,12 +104,16 @@
                   >
                     <i class="fab fa-2x fa-github work__code"></i>
                   </a>
+                  <a class="video-btn js-modal-btn" data-video-id="qOg54TK6kvQ">
+                    <i class="fab fa-2x fa-youtube work__code"></i>
+                  </a>
                 </div>
               </div>
               <div class="work__image-box">
                 <img
                   src="./images/project-cubemail_726x420.jpg"
                   class="work__image"
+                  loading="lazy"
                   data-src="images/full-cube-mail.jpg"
                   alt="CubeMail"
                 />
@@ -138,12 +145,16 @@
                   >
                     <i class="fab fa-2x fa-github work__code"></i>
                   </a>
+                  <a class="video-btn js-modal-btn" data-video-id="qOg54TK6kvQ">
+                    <i class="fab fa-2x fa-youtube work__code"></i>
+                  </a>
                 </div>
               </div>
               <div class="work__image-box">
                 <img
                   src="./images/project-instagram-clone.jpg"
                   class="work__image"
+                  loading="lazy"
                   data-src="images/full-insta-clone.jpg"
                   alt="Instagram Clone"
                 />
@@ -177,12 +188,16 @@
                   >
                     <i class="fab fa-2x fa-github work__code"></i>
                   </a>
+                  <a class="video-btn js-modal-btn" data-video-id="qOg54TK6kvQ">
+                    <i class="fab fa-2x fa-youtube work__code"></i>
+                  </a>
                 </div>
               </div>
               <div class="work__image-box">
                 <img
                   src="./images/project-ask-me_726x454.jpg"
                   class="work__image"
+                  loading="lazy"
                   data-src="images/full-dev-culture.jpg"
                   alt="Ask Me"
                 />
@@ -214,12 +229,16 @@
                   >
                     <i class="fab fa-2x fa-github work__code"></i>
                   </a>
+                  <a class="video-btn js-modal-btn" data-video-id="qOg54TK6kvQ">
+                    <i class="fab fa-2x fa-youtube work__code"></i>
+                  </a>
                 </div>
               </div>
               <div class="work__image-box">
                 <img
                   src="./images/project-dev-culture_726x421.jpg"
                   class="work__image"
+                  loading="lazy"
                   data-src="images/full-dev-culture.jpg"
                   alt="Dev Culture"
                 />
@@ -250,12 +269,16 @@
                   >
                     <i class="fab fa-2x fa-github work__code"></i>
                   </a>
+                  <a class="video-btn js-modal-btn" data-video-id="qOg54TK6kvQ">
+                    <i class="fab fa-2x fa-youtube work__code"></i>
+                  </a>
                 </div>
               </div>
               <div class="work__image-box">
                 <img
                   src="./images/project-random-movie_726x588.jpg"
                   class="work__image"
+                  loading="lazy"
                   data-src="images/full-random-movie.jpg"
                   alt="Random Movie"
                 />
@@ -287,12 +310,16 @@
                   >
                     <i class="fab fa-2x fa-github work__code"></i>
                   </a>
+                  <a class="video-btn js-modal-btn" data-video-id="qOg54TK6kvQ">
+                    <i class="fab fa-2x fa-youtube work__code"></i>
+                  </a>
                 </div>
               </div>
               <div class="work__image-box">
                 <img
                   src="./images/project-pixel-art-maker.jpg"
                   class="work__image"
+                  loading="lazy"
                   data-src="images/full-pixel-art-maker.jpg"
                   alt="Pixel Art Maker"
                 />
@@ -305,7 +332,7 @@
       <!-- ***** The Modal ***** -->
       <div id="imgModel" class="modal">
         <span class="modal-close">&times;</span>
-        <img class="modal-content" id="modal-img" />
+        <img class="modal-content" id="modal-img" loading="lazy" />
         <div id="caption"></div>
       </div>
 
@@ -475,9 +502,10 @@
       <img
         src="./images/arrow-up.svg"
         alt="Back to Top"
+        loading="lazy"
         class="back-to-top__image"
       />
     </a>
-    <script src="./index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
