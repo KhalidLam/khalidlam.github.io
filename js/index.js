@@ -70,4 +70,4 @@ document.querySelectorAll(".work__image").forEach((img) => {
   });
 });
 
-$(".js-modal-btn").modalVideo({ channel: "youtube"});
+// $(".js-modal-btn").modalVideo({ channel: "youtube"});
