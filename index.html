@@ -3,560 +3,342 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="./images/favicon.ico" />
-    <meta name="description" content="Add small description of yourslef." />
+    <meta
+      name="description"
+      content="Khalid Lamsadi is a software engineer building backend systems, AI workflows, dashboards, web products, and writing about software."
+    />
     <meta
       name="keywords"
-      content="Khalid Lamsadi, React, Laravel, HTML, CSS, PHP, JavaScript"
+      content="Khalid Lamsadi, Software Engineer, Backend Engineer, Go, TypeScript, React, Kafka, Elasticsearch, AI workflows"
     />
-
-    <title>
-      Khalid Lamsadi | A Full-Stack Web Developer based in Casablanca, Morocco.
-    </title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
-      crossorigin="anonymous"
+    <meta name="author" content="Khalid Lamsadi" />
+    <meta property="og:title" content="Khalid Lamsadi | Software Engineer" />
+    <meta
+      property="og:description"
+      content="Personal portfolio, work, articles, and contact information for Khalid Lamsadi."
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://khalidlam.github.io/" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.ico" />
     <link rel="stylesheet" href="css/index.css" />
-
-    <link rel="stylesheet" type="text/css" href="css/modal-video.min.css" />
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <script src="js/jquery-modal-video.min.js"></script>
+    <title>Khalid Lamsadi | Software Engineer</title>
   </head>
 
   <body>
-    <!-- ***** Header ***** -->
-
-    <header class="header" role="banner" id="top">
-      <div class="row">
-        <nav class="nav" role="navigation">
-          <ul class="nav__items">
-            <li class="nav__item">
-              <a href="#work" class="nav__link">Work</a>
-            </li>
-            <li class="nav__item">
-              <a href="#skills" class="nav__link">Skills</a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header__text-box row">
-        <div class="header__text">
-          <h1 class="heading-primary">
-            <span>Hi all, I'm Khalid 👋</span>
-          </h1>
-
-          <p>
-            A Software Developer, having experience in building Web and Mobile
-            applications with JavaScript / Reactjs / Laravel / Android Studio
-            and some other cool libraries and frameworks.
-          </p>
-          <a href="#contact" class="btn btn--pink">Contact me</a>
-          <a
-            href="https://drive.google.com/file/d/1DIo6VvlM1K8md2aYEchcLXLOQtIR6xRl/view?usp=sharing"
-            class="btn btn--pink"
-            target="_blanc"
-            >My Resume</a
-          >
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Khalid Lamsadi home">KhalidLam</a>
+        <div class="nav__right">
+          <div class="nav__links">
+            <a href="#work" data-i18n="nav.work">Work</a>
+            <a href="#experience" data-i18n="nav.experience">Experience</a>
+            <a href="#skills" data-i18n="nav.skills">Skills</a>
+            <span class="nav__disabled" aria-disabled="true" data-i18n="nav.articles">Articles</span>
+            <a href="#contact" data-i18n="nav.contact">Contact</a>
+          </div>
+          <div class="nav__controls" aria-label="Display controls">
+            <div class="language-switch" aria-label="Language switch">
+              <button type="button" data-lang="en" aria-pressed="true">EN</button>
+              <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+              <button type="button" data-lang="ar" aria-pressed="false">AR</button>
+            </div>
+            <button class="theme-toggle" type="button" id="themeToggle" aria-label="Switch color theme" aria-pressed="false">
+              <span class="theme-toggle__dot" aria-hidden="true"></span>
+              <span class="theme-toggle__label" data-i18n="theme.dark">Dark</span>
+            </button>
+          </div>
         </div>
-      </div>
+      </nav>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__copy reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Software engineer</p>
+          <h1 id="hero-title">Khalid Lamsadi</h1>
+          <p class="hero__lead" data-i18n="hero.lead">
+            I help teams ship dependable software: APIs, automation, search,
+            internal tools, and AI-assisted workflows that survive real traffic
+            and real business constraints.
+          </p>
+          <div class="hero__actions" aria-label="Primary actions">
+            <a class="button button--primary" href="#contact" data-i18n="hero.contact">Contact me</a>
+            <a
+              class="button button--secondary"
+              href="./assets/khalid-lamsadi-software-engineer.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="hero.resume"
+              >View resume</a
+            >
+          </div>
+        </div>
+
+        <div class="hero__media reveal" aria-label="Project previews">
+          <figure class="feature-image">
+            <img src="./images/screely-1601140720440.png" alt="CubeMail interface preview" />
+          </figure>
+          <div class="media-thumbs">
+            <img src="./images/screely-1601141097809.png" alt="Random Movie interface preview" />
+            <img src="./images/screely-1601141888949.png" alt="Ask Me interface preview" />
+          </div>
+        </div>
+      </section>
     </header>
 
-    <!-- ***** Main ***** -->
-
-    <main role="main">
-      <!-- ***** Work ***** -->
-
-      <section class="work" id="work">
-        <div class="row">
-          <h2>My Work</h2>
-          <div class="work__boxes">
-            <!-- CubeMail  -->
-            <div class="work__box">
-              <div class="work__text">
-                <h3>CubeMail</h3>
-                <p>
-                  Webmail-client built using React and Gmail API, runs in the
-                  browser.
-                </p>
-                <ul class="work__list">
-                  <li>ReactJS</li>
-                  <li>Chakra UI</li>
-                  <li>GMAIL REST API</li>
-                </ul>
-
-                <div class="work__links">
-                  <a
-                    href="https://khalidlam.github.io/CubeMail/"
-                    class="link__text"
-                    target="_blanc"
-                  >
-                    Visit Site <span>&rarr;</span>
-                  </a>
-                  <a
-                    href="https://github.com/KhalidLam/CubeMail"
-                    target="_blanc"
-                  >
-                    <i class="fab fa-2x fa-github work__code"></i>
-                  </a>
-<!--                   <a class="video-btn js-modal-btn" data-video-id="AxAlL4z1Wjg">
-                    <i class="fab fa-2x fa-youtube work__code"></i>
-                  </a> -->
-                  <a href="https://www.youtube.com/watch?v=AxAlL4z1Wjg" target="_blanc">
-                    <i class="fab fa-2x fa-youtube work__code"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="work__image-box">
-                <img
-                  src="./images/screely-1601140720440.png"
-                  class="work__image"
-                  loading="lazy"
-                  data-src="images/full-cube-mail.jpg"
-                  alt="CubeMail"
-                />
-              </div>
-            </div>
-
-            <!-- InstaClone -->
-            <div class="work__box">
-              <div class="work__text">
-                <h3>Instagram Clone</h3>
-                <p>An Instagram Clone built with Laravel</p>
-                <ul class="work__list">
-                  <li>Laravel</li>
-                  <li>VueJs</li>
-                  <li>MySQL</li>
-                </ul>
-
-                <div class="work__links">
-                  <a
-                    href="https://myinstacloone.herokuapp.com"
-                    class="link__text"
-                    target="_blanc"
-                  >
-                    Visit Site <span>&rarr;</span>
-                  </a>
-                  <a
-                    href="https://github.com/KhalidLam/instagramClone"
-                    target="_blanc"
-                  >
-                    <i class="fab fa-2x fa-github work__code"></i>
-                  </a>
-<!--                   <a class="video-btn js-modal-btn" data-video-id="_PftYRQcm8g">
-                    <i class="fab fa-2x fa-youtube work__code"></i>
-                  </a> -->
-                  <a href="https://www.youtube.com/watch?v=_PftYRQcm8g" target="_blanc">
-                    <i class="fab fa-2x fa-youtube work__code"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="work__image-box">
-                <img
-                  src="./images/screely-1601141026959.png"
-                  class="work__image"
-                  loading="lazy"
-                  data-src="images/full-insta-clone.jpg"
-                  alt="Instagram Clone"
-                />
-              </div>
-            </div>
-
-            <!-- Ask Me -->
-            <div class="work__box">
-              <div class="work__text">
-                <h3>Ask Me</h3>
-                <p>Clone project of stackoverflow built with</p>
-                <ul class="work__list">
-                  <li>Laravel (REST API)</li>
-                  <li>ReactJS</li>
-                  <li>MySQL</li>
-                  <li>Bootstrap</li>
-                </ul>
-
-                <div class="work__links">
-                  <a href="#" class="link__text isDisabled" target="_blanc">
-                    Visit Site <span>&rarr;</span>
-                  </a>
-                  <a href="https://github.com/KhalidLam/AskMe-QA" target="_blanc">
-                    <i class="fab fa-2x fa-github work__code"></i>
-                  </a>
-<!--                   <a
-                    class="video-btn js-modal-btn isDisabled"
-                    data-video-id="qOg54TK6kvQ"
-                  >
-                    <i class="fab fa-2x fa-youtube work__code"></i>
-                  </a> -->
-                  <a href="https://www.youtube.com/watch?v=qOg54TK6kvQ" target="_blanc">
-                    <i class="fab fa-2x fa-youtube work__code"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="work__image-box">
-                <img
-                  src="./images/screely-1601141888949.png"
-                  class="work__image"
-                  loading="lazy"
-                  data-src="images/full-ask-me.jpg"
-                  alt="Ask Me"
-                />
-              </div>
-            </div>
-
-            <!-- Blog Native -->
-            <div class="work__box">
-              <div class="work__text">
-                <h3>Dev Culture</h3>
-                <p>Simple PHP blog application written with php 7 and MySQL</p>
-                <ul class="work__list">
-                  <li>PHP</li>
-                  <li>MySQL</li>
-                  <li>Bootstrap</li>
-                </ul>
-
-                <div class="work__links">
-                  <a
-                    href="http://www.devculture.tk/"
-                    class="link__text"
-                    target="_blanc"
-                  >
-                    Visit Site <span>&rarr;</span>
-                  </a>
-                  <a
-                    href="https://github.com/KhalidLam/PHP-Blog"
-                    target="_blanc"
-                  >
-                    <i class="fab fa-2x fa-github work__code"></i>
-                  </a>
-<!--                   <a class="video-btn js-modal-btn" data-video-id="ZYdcq6gfcKo">
-                    <i class="fab fa-2x fa-youtube work__code"></i>
-                  </a> -->
-                  <a href="https://www.youtube.com/watch?v=ZYdcq6gfcKo" target="_blanc">
-                    <i class="fab fa-2x fa-youtube work__code"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="work__image-box">
-                <img
-                  src="./images/screely-1601140942525.png"
-                  class="work__image"
-                  loading="lazy"
-                  data-src="images/full-dev-culture.jpg"
-                  alt="Dev Culture"
-                />
-              </div>
-            </div>
-
-            <!-- Random Movie -->
-            <div class="work__box">
-              <div class="work__text">
-                <h3>Random Movie</h3>
-                <p>Random Movie built with ReactJS</p>
-                <ul class="work__list">
-                  <li>ReactJS</li>
-                  <li>TMDb API</li>
-                </ul>
-
-                <div class="work__links">
-                  <a
-                    href="https://khalidlam.github.io/Random-Movie/"
-                    class="link__text"
-                    target="_blanc"
-                  >
-                    Visit Site <span>&rarr;</span>
-                  </a>
-                  <a
-                    href="https://github.com/KhalidLam/Random-Movie"
-                    target="_blanc"
-                  >
-                    <i class="fab fa-2x fa-github work__code"></i>
-                  </a>
-                  <!-- <a class="video-btn js-modal-btn" data-video-id="qOg54TK6kvQ">
-                    <i class="fab fa-2x fa-youtube work__code"></i>
-                  </a> -->
-                </div>
-              </div>
-              <div class="work__image-box">
-                <img
-                  src="./images/screely-1601141097809.png"
-                  class="work__image"
-                  loading="lazy"
-                  data-src="images/full-random-movie.jpg"
-                  alt="Random Movie"
-                />
-              </div>
-            </div>
-
-            <!-- Recipes App -->
-            <div class="work__box">
-              <div class="work__text">
-                <h3>Recipes App</h3>
-                <p>Jonas Schmedtmann Final project</p>
-                <ul class="work__list">
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JAVASCRIPT</li>
-                  <li>Edamam API</li>
-                </ul>
-
-                <div class="work__links">
-                  <a
-                    href="https://khalidlam.github.io/Recipes"
-                    class="link__text"
-                    target="_blanc"
-                  >
-                    Visit Site <span>&rarr;</span>
-                  </a>
-                  <a
-                    href="https://github.com/KhalidLam/Recipes"
-                    target="_blanc"
-                  >
-                    <i class="fab fa-2x fa-github work__code"></i>
-                  </a>
-                  <!-- <a class="video-btn js-modal-btn" data-video-id="qOg54TK6kvQ">
-                    <i class="fab fa-2x fa-youtube work__code"></i>
-                  </a> -->
-                </div>
-              </div>
-              <div class="work__image-box">
-                <img
-                  src="./images/screely-1601319018422.png"
-                  class="work__image"
-                  loading="lazy"
-                  data-src="images/full-recipes.png"
-                  alt="Recipes App"
-                />
-              </div>
-            </div>
-
-            <!-- Pixel Art Maker -->
-            <div class="work__box">
-              <div class="work__text">
-                <h3>Pixel Art Maker</h3>
-                <p>Udacity Front-End final project</p>
-                <ul class="work__list">
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JAVASCRIPT</li>
-                </ul>
-
-                <div class="work__links">
-                  <a
-                    href="https://khalidlam.github.io/PixelArtMaker"
-                    class="link__text"
-                    target="_blanc"
-                  >
-                    Visit Site <span>&rarr;</span>
-                  </a>
-                  <a
-                    href="https://github.com/KhalidLam/PixelArtMaker"
-                    target="_blanc"
-                  >
-                    <i class="fab fa-2x fa-github work__code"></i>
-                  </a>
-                  <!-- <a class="video-btn js-modal-btn" data-video-id="qOg54TK6kvQ">
-                    <i class="fab fa-2x fa-youtube work__code"></i>
-                  </a> -->
-                </div>
-              </div>
-              <div class="work__image-box">
-                <img
-                  src="./images/screely-1601141495828.png"
-                  class="work__image"
-                  loading="lazy"
-                  data-src="images/full-pixel-art-maker.jpg"
-                  alt="Pixel Art Maker"
-                />
-              </div>
+    <main>
+      <section class="section section--about" aria-label="About">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+            <h2 data-i18n="about.title">About me.</h2>
+          </div>
+          <div class="about-grid">
+            <p class="about-lead reveal" data-i18n="about.lead">
+              I like building useful software after the launch moment: backend services,
+              product workflows, dashboards, search behavior, and small tools that remove friction from a team.
+            </p>
+            <div class="about-notes reveal">
+              <p data-i18n="about.note1">
+                I enjoy owning the path from the first API shape to the interface people actually use.
+              </p>
+              <p data-i18n="about.note2">
+                Most of my work lives around product engineering, platform reliability, and practical automation.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ***** The Modal ***** -->
-      <div id="imgModel" class="modal">
-        <span class="modal-close">&times;</span>
-        <img class="modal-content" id="modal-img" loading="lazy" />
-        <div id="caption"></div>
-      </div>
+      <section class="section" id="work">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="work.eyebrow">Work</p>
+            <h2 data-i18n="work.title">Things I work on.</h2>
+          </div>
 
-      <!-- ***** Skills ***** -->
+          <div class="work-gallery reveal" aria-label="Selected interface previews">
+            <img src="./images/screely-1601140720440.png" alt="CubeMail webmail interface" />
+            <img src="./images/screely-1601319018422.png" alt="Recipes application interface" />
+            <img src="./images/screely-1601141097809.png" alt="Random Movie application interface" />
+          </div>
 
-      <section class="skills" id="skills">
-        <div class="row">
-          <h2>Skills</h2>
-          <div class="skills_boxes">
-            <div class="skill__box">
-              <h3 class="skill__header">Languages</h3>
-              <div class="skill_list">
-                <div class="skill">
-                  <i class="fab fa-5x fa-js"></i>
-                  <h4 class="skill__name">JavaScript</h4>
-                </div>
-                <div class="skill">
-                  <i class="fab fa-5x fa-php"></i>
-                  <h4 class="skill__name">PHP</h4>
-                </div>
-                <div class="skill">
-                  <i class="fab fa-5x fa-java"></i>
-                  <h4 class="skill__name">JAVA</h4>
-                </div>
-                <div class="skill">
-                  <i class="fab fa-5x fa-html5"></i>
-                  <h4 class="skill__name">HTML</h4>
-                </div>
-                <div class="skill">
-                  <i class="fab fa-5x fa-css3-alt"></i>
-                  <h4 class="skill__name">CSS</h4>
-                </div>
-                <div class="skill">
-                  <i class="fab fa-5x fa-sass"></i>
-                  <h4 class="skill__name">Sass</h4>
+          <div class="work-list">
+            <article class="work-item reveal">
+              <span>01</span>
+              <div>
+                <h3 data-i18n="work.backendTitle">Backend platforms</h3>
+                <p data-i18n="work.backend">APIs, services, queues, data models, caching, and integrations.</p>
+                <div class="mini-stack">
+                  <span>Go</span>
+                  <span>Node.js</span>
+                  <span>PostgreSQL</span>
+                  <span>Redis</span>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="skill__box">
-              <h3 class="skill__header">Frameworks</h3>
-              <div class="skill_list">
-                <div class="skill">
-                  <i class="fab fa-5x fa-react"></i>
-                  <h4 class="skill__name">React</h4>
-                </div>
-                <div class="skill">
-                  <i class="fab fa-5x fa-node-js"></i>
-                  <h4 class="skill__name">Nodejs</h4>
-                </div>
-                <div class="skill">
-                  <i class="fab fa-5x fa-laravel"></i>
-                  <h4 class="skill__name">Laravel</h4>
-                </div>
-                <div class="skill">
-                  <i class="fab fa-5x fa-bootstrap"></i>
-                  <h4 class="skill__name">Bootstrap</h4>
-                </div>
-                <div class="skill">
-                  <i class="fab fa-5x fa-android"></i>
-                  <h4 class="skill__name">Android</h4>
+            <article class="work-item reveal">
+              <span>02</span>
+              <div>
+                <h3 data-i18n="work.aiTitle">AI workflows</h3>
+                <p data-i18n="work.ai">Classification, moderation, provider fallback, review flows, and automation.</p>
+                <div class="mini-stack">
+                  <span>OpenAI</span>
+                  <span>Gemini</span>
+                  <span>Kafka</span>
+                  <span>Avro</span>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="skill__box">
-              <h3 class="skill__header">Tools</h3>
-              <div class="skill_list">
-                <div class="skill">
-                  <i class="fab fa-5x fa-github"></i>
-                  <h4 class="skill__name">Git & Github</h4>
-                </div>
-                <div class="skill">
-                  <i class="fab fa-5x fa-npm"></i>
-                  <h4 class="skill__name">NPM</h4>
-                </div>
-                <div class="skill">
-                  <i class="fab fa-5x fa-chrome"></i>
-                  <h4 class="skill__name">Chrome DevTools</h4>
-                </div>
-                <div class="skill">
-                  <i class="fab fa-5x fa-slack"></i>
-                  <h4 class="skill__name">Slack</h4>
-                </div>
-                <div class="skill">
-                  <i class="fas fa-5x fa-fire"></i>
-                  <h4 class="skill__name">Firebase</h4>
+            <article class="work-item reveal">
+              <span>03</span>
+              <div>
+                <h3 data-i18n="work.dashboardsTitle">Dashboards and internal tools</h3>
+                <p data-i18n="work.dashboards">Operational interfaces, admin flows, charts, tables, and team-facing tools.</p>
+                <div class="mini-stack">
+                  <span>React</span>
+                  <span>Next.js</span>
+                  <span>GraphQL</span>
+                  <span>tRPC</span>
                 </div>
               </div>
-            </div>
+            </article>
+
+            <article class="work-item reveal">
+              <span>04</span>
+              <div>
+                <h3 data-i18n="work.searchTitle">Search and data flows</h3>
+                <p data-i18n="work.search">Search tuning, multilingual behavior, analytics, sync jobs, and pipelines.</p>
+                <div class="mini-stack">
+                  <span>Elasticsearch</span>
+                  <span>KSQL</span>
+                  <span>MongoDB</span>
+                  <span>Grafana</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="experience.eyebrow">Experience</p>
+            <h2 data-i18n="experience.title">5+ years building software across product teams.</h2>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <span class="timeline-item__date">2024 - now</span>
+              <div>
+                <h3>Avito.ma</h3>
+                <p data-i18n="experience.avito">Backend engineering on marketplace systems, moderation, search, and operational workflows.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <span class="timeline-item__date">2021 - 2024</span>
+              <div>
+                <h3>StartupSquare</h3>
+                <p data-i18n="experience.startupsquare">Full-stack product work across program management, booking, KPIs, analytics, and platform tools.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <span class="timeline-item__date">side projects</span>
+              <div>
+                <h3 data-i18n="experience.independentTitle">Independent builds</h3>
+                <p data-i18n="experience.independent">Small products and experiments around scheduling, email, developer tools, and learning projects.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="skills.eyebrow">Skills</p>
+            <h2 data-i18n="skills.title">Tools I use often.</h2>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-group reveal">
+              <h3 data-i18n="skills.backend">Backend</h3>
+              <div class="skill-list">
+                <span>Go</span>
+                <span>Node.js</span>
+                <span>TypeScript</span>
+                <span>REST</span>
+                <span>GraphQL</span>
+              </div>
+            </article>
+            <article class="skill-group reveal">
+              <h3 data-i18n="skills.data">Data</h3>
+              <div class="skill-list">
+                <span>PostgreSQL</span>
+                <span>MongoDB</span>
+                <span>Redis</span>
+                <span>Elasticsearch</span>
+              </div>
+            </article>
+            <article class="skill-group reveal">
+              <h3 data-i18n="skills.messaging">Messaging</h3>
+              <div class="skill-list">
+                <span>Kafka</span>
+                <span>Avro</span>
+                <span>KSQL</span>
+                <span>BullMQ</span>
+              </div>
+            </article>
+            <article class="skill-group reveal">
+              <h3 data-i18n="skills.frontend">Frontend</h3>
+              <div class="skill-list">
+                <span>React</span>
+                <span>Next.js</span>
+                <span>Tailwind CSS</span>
+                <span>tRPC</span>
+              </div>
+            </article>
+            <article class="skill-group reveal">
+              <h3 data-i18n="skills.infra">Infra</h3>
+              <div class="skill-list">
+                <span>Docker</span>
+                <span>Kubernetes</span>
+                <span>GitHub Actions</span>
+                <span>Grafana</span>
+              </div>
+            </article>
+            <article class="skill-group reveal">
+              <h3 data-i18n="skills.ai">AI / LLM</h3>
+              <div class="skill-list">
+                <span>OpenAI API</span>
+                <span>Gemini API</span>
+                <span>LLM pipelines</span>
+                <span>Cursor</span>
+              </div>
+            </article>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ***** Contact ***** -->
-
     <section class="contact" id="contact">
-      <div class="row">
-        <h2>Get in Touch</h2>
-        <div class="contact__info">
-          <p>
-            Are you looking for a fast-performing and user-friendly website to
-            represent your product or business? or have some advice for me or
-            just want to say "Hi 👋" in any case feel free to Let me know. I
-            will do my best to respond back. 😊 The quickest way to reach out to
-            me is via email.
+      <div class="section-inner contact__grid">
+        <div class="contact__copy reveal">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+          <h2 data-i18n="contact.title">Let us build something useful.</h2>
+          <p data-i18n="contact.copy">
+            Send me a short note about what you are building, where it is stuck,
+            or what kind of engineering help you need.
           </p>
-
-          <a href="mailto:lamsadikhalid@gmail.com" class="btn"
-            >lamsadikhalid@gmail.com</a
-          >
+          <div class="contact__actions">
+            <a class="button button--primary" href="mailto:lamsadi.khalid@gmail.com">lamsadi.khalid@gmail.com</a>
+            <a
+              class="button button--secondary"
+              href="https://github.com/KhalidLam"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            <a
+              class="button button--secondary"
+              href="https://www.linkedin.com/in/khalid-lamsadi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </div>
         </div>
+
+        <form class="contact-form reveal" action="mailto:lamsadi.khalid@gmail.com" method="post" enctype="text/plain">
+          <label>
+            <span data-i18n="form.name">Name</span>
+            <input name="name" type="text" autocomplete="name" data-i18n-placeholder="form.namePlaceholder" placeholder="Your name" required />
+          </label>
+          <label>
+            <span data-i18n="form.email">Email</span>
+            <input name="email" type="email" autocomplete="email" data-i18n-placeholder="form.emailPlaceholder" placeholder="you@example.com" required />
+          </label>
+          <label>
+            <span data-i18n="form.message">Message</span>
+            <textarea name="message" rows="5" data-i18n-placeholder="form.messagePlaceholder" placeholder="Tell me what you are building" required></textarea>
+          </label>
+          <button class="button button--primary" type="submit" data-i18n="form.send">Send message</button>
+          <p class="form-note" data-i18n="form.note">This opens your email app with the message ready to send.</p>
+        </form>
       </div>
     </section>
 
-    <!-- ***** Footer ***** -->
-
-    <footer role="contentinfo" class="footer">
-      <div class="row">
-        <ul class="footer__social-links">
-          <li class="footer__social-link-item">
-            <a
-              href="https://twitter.com/Moon96Schwarz"
-              title="Link to Twitter Profile"
-              target="_blank"
-            >
-              <i class="fab fa-2x fa-twitter" class="footer__social-icon"></i>
-            </a>
-          </li>
-          <li class="footer__social-link-item">
-            <a
-              href="https://github.com/KhalidLam"
-              title="Link to Github Profile"
-              target="_blank"
-            >
-              <i class="fab fa-2x fa-github"></i>
-            </a>
-          </li>
-          <li class="footer__social-link-item">
-            <a
-              href="https://codepen.io/GkLam"
-              title="Link to Codepen Profile"
-              target="_blank"
-            >
-              <i class="fab fa-2x fa-codepen"></i>
-            </a>
-          </li>
-          <li class="footer__social-link-item">
-            <a
-              href="https://www.linkedin.com/in/khalid-lamsadi/"
-              target="_blank"
-            >
-              <i class="fab fa-2x fa-linkedin"></i>
-            </a>
-          </li>
-        </ul>
-
-        <!--
-        <p>
-          &copy; 2020 - Template designed & developed by
-          <a href="https://nisar.dev" class="link">Nisar</a>.
-        </p> 
-        -->
+    <footer class="footer">
+      <div class="section-inner footer__inner">
+        <p>Khalid Lamsadi</p>
+        <a href="#top">Back to top</a>
       </div>
     </footer>
 
-    <a href="#top" class="back-to-top" title="Back to Top">
-      <img
-        src="./images/arrow-up.svg"
-        alt="Back to Top"
-        loading="lazy"
-        class="back-to-top__image"
-      />
-    </a>
     <script src="js/index.js"></script>
   </body>
 </html>
