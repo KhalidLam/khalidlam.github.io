@@ -313,7 +313,10 @@
           </div>
         </div>
 
-        <form class="contact-form reveal" action="mailto:lamsadi.khalid@gmail.com" method="post" enctype="text/plain">
+        <form class="contact-form reveal" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="701c3ed0-1263-4d39-9be0-64b96457c6f9" />
+          <input type="hidden" name="subject" value="New portfolio message from khalidlam.github.io" />
+          <input type="checkbox" name="botcheck" class="form-hidden" tabindex="-1" autocomplete="off" />
           <label>
             <span data-i18n="form.name">Name</span>
             <input name="name" type="text" autocomplete="name" data-i18n-placeholder="form.namePlaceholder" placeholder="Your name" required />
@@ -327,7 +330,8 @@
             <textarea name="message" rows="5" data-i18n-placeholder="form.messagePlaceholder" placeholder="Tell me what you are building" required></textarea>
           </label>
           <button class="button button--primary" type="submit" data-i18n="form.send">Send message</button>
-          <p class="form-note" data-i18n="form.note">This opens your email app with the message ready to send.</p>
+          <p class="form-note" data-i18n="form.note">This sends the message directly to my inbox.</p>
+          <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>

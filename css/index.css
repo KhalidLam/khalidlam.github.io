@@ -474,6 +474,10 @@ html[data-theme="dark"] .work-gallery img {
   gap: 1rem;
 }
 
+.form-hidden {
+  display: none;
+}
+
 .contact-form label {
   display: grid;
   gap: 0.45rem;
@@ -502,6 +506,25 @@ html[data-theme="dark"] .work-gallery img {
 .form-note {
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.form-status {
+  min-height: 1.4rem;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.form-status[data-state="success"] {
+  color: #247a45;
+}
+
+.form-status[data-state="error"] {
+  color: #b42318;
+}
+
+.button[disabled] {
+  cursor: wait;
+  opacity: 0.65;
 }
 
 .footer {

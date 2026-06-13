@@ -3,6 +3,7 @@ const themeToggle = document.querySelector("#themeToggle");
 const themeLabel = themeToggle?.querySelector(".theme-toggle__label");
 const languageButtons = document.querySelectorAll("[data-lang]");
 const contactForm = document.querySelector(".contact-form");
+const formStatus = contactForm?.querySelector(".form-status");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const storage = {
@@ -77,7 +78,10 @@ const translations = {
     "form.message": "Message",
     "form.messagePlaceholder": "Tell me what you are building",
     "form.send": "Send message",
-    "form.note": "This opens your email app with the message ready to send.",
+    "form.note": "This sends the message directly to my inbox.",
+    "form.sending": "Sending...",
+    "form.success": "Message sent. Thank you.",
+    "form.error": "Something went wrong. Please email me directly.",
   },
   fr: {
     "nav.work": "Travail",
@@ -132,7 +136,10 @@ const translations = {
     "form.message": "Message",
     "form.messagePlaceholder": "Dites-moi ce que vous construisez",
     "form.send": "Envoyer",
-    "form.note": "Ce formulaire ouvre votre application email avec le message pret a envoyer.",
+    "form.note": "Ce formulaire envoie le message directement dans ma boite mail.",
+    "form.sending": "Envoi...",
+    "form.success": "Message envoye. Merci.",
+    "form.error": "Une erreur est survenue. Envoyez-moi un email directement.",
   },
   ar: {
     "nav.work": "العمل",
@@ -185,7 +192,10 @@ const translations = {
     "form.message": "الرسالة",
     "form.messagePlaceholder": "اكتب لي عن المشروع أو المشكلة",
     "form.send": "إرسال الرسالة",
-    "form.note": "سيفتح هذا النموذج تطبيق البريد لديك مع رسالة جاهزة للإرسال.",
+    "form.note": "يرسل هذا النموذج رسالتك مباشرة إلى بريدي.",
+    "form.sending": "جار الإرسال...",
+    "form.success": "تم إرسال الرسالة. شكرًا لك.",
+    "form.error": "حدث خطأ أثناء الإرسال. يمكنك مراسلتي مباشرة عبر البريد.",
   },
 };
 
@@ -238,22 +248,50 @@ languageButtons.forEach((button) => {
   button.addEventListener("click", () => applyLanguage(button.dataset.lang));
 });
 
-contactForm?.addEventListener("submit", (event) => {
+const setFormState = (state, messageKey) => {
+  if (!formStatus) return;
+  formStatus.dataset.state = state;
+  formStatus.textContent = messageKey ? getText(messageKey) : "";
+};
+
+contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const formData = new FormData(contactForm);
   const name = String(formData.get("name") || "").trim();
   const email = String(formData.get("email") || "").trim();
   const message = String(formData.get("message") || "").trim();
+  const submitButton = contactForm.querySelector('button[type="submit"]');
 
   if (!name || !email || !message) {
     contactForm.reportValidity();
     return;
   }
 
-  const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-  window.location.href = `mailto:lamsadi.khalid@gmail.com?subject=${subject}&body=${body}`;
+  setFormState("pending", "form.sending");
+  submitButton?.setAttribute("disabled", "true");
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || "Form submission failed");
+    }
+
+    contactForm.reset();
+    setFormState("success", "form.success");
+  } catch {
+    setFormState("error", "form.error");
+  } finally {
+    submitButton?.removeAttribute("disabled");
+  }
 });
 
 if (prefersReducedMotion.matches) {
