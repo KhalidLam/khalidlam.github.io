@@ -270,6 +270,9 @@ contactForm?.addEventListener("submit", async (event) => {
 
   setFormState("pending", "form.sending");
   submitButton?.setAttribute("disabled", "true");
+  formData.set("subject", `[Portfolio] New message from ${name}`);
+  formData.set("from_name", "KhalidLam Portfolio");
+  formData.set("source", "khalidlam.github.io");
 
   try {
     const response = await fetch(contactForm.action, {
